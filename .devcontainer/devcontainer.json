@@ -1,0 +1,32 @@
+{
+  "name": "my_package",
+  "build": {
+    "context": "..",
+    "dockerfile": "Dockerfile",
+    "target": "devenv"
+  },
+
+"postCreateCommand": "/bin/bash .devcontainer/setup_venv.sh"
+  ,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.isort",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "njpwerner.autodocstring",
+        "streetsidesoftware.code-spell-checker",
+        "swellaby.workspace-config-plus"
+      ]
+    },
+    "settings": {"python.defaultInterpreterPath": "/app/.venv/bin/python"}
+    
+  },
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+  "mounts": [
+    "source=${localEnv:HOME},target=/home/devuser,type=bind"
+  ]
+
+}
+
