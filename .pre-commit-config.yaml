@@ -55,6 +55,7 @@ repos:
         args: [
   "--cache-dir", ".mypy_cache",
   "--config-file", "pyproject.toml",
+  "--ignore-missing-imports",
 ]
 
 -   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update

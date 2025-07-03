@@ -1,3 +1,5 @@
+mypy
 numpy
 pre-commit
 pytest
+pytest-mypy-plugins
