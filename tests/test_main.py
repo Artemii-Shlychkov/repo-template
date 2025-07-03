@@ -1,6 +1,6 @@
 import pytest
 
-from src.my_package.main import main as mut
+from src.my_package import main as mut
 
 
 @pytest.mark.parametrize(
@@ -13,7 +13,7 @@ from src.my_package.main import main as mut
     ],
 )
 def test_main(a: int, b: int, expected: int) -> None:
-    result = mut(a, b)
+    result = mut.main(a, b)
     assert result == expected, (
         f"Expected {expected}, but got {result} for inputs {a} and {b}"
     )

@@ -45,15 +45,18 @@ repos:
         args: ["--verbose"]
     -   id: check-dependabot
         args: ["--verbose"]
--   repo: local
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.16.1
     hooks:
     -   id: mypy
         name: mypy
-        entry: mypy
         require_serial: true
-        language: system
         types: [python]
-        args: ["--cache-dir", ".mypy_cache", "--config-file", "pyproject.toml"]
+        args: [
+  "--cache-dir", ".mypy_cache",
+  "--config-file", "pyproject.toml",
+]
+
 -   repo: https://gitlab.com/vojko.pribudic.foss/pre-commit-update
     rev: v0.8.0
     hooks:

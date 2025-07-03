@@ -20,8 +20,36 @@
         "swellaby.workspace-config-plus"
       ]
     },
-    "settings": {"python.defaultInterpreterPath": "/app/.venv/bin/python"}
-    
+    "settings": {"python.defaultInterpreterPath": "/app/.venv/bin/python",
+
+  "autoDocstring.docstringFormat": "numpy",
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "cSpell.words": [
+    "charliermarsh",
+    "devenv",
+    "devuser",
+    "docstrings",
+    "doctests",
+    "isort",
+    "Kolibrain",
+    "mypy",
+    "ndarray",
+    "njpwerner",
+    "numpy",
+    "pydocstyle",
+    "pytest",
+    "PYTHONDONTWRITEBYTECODE",
+    "PYTHONUNBUFFERED",
+    "setuptools",
+    "swellaby",
+    "testpaths",
+    "venv"
+  ]
+}
   },
   "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "mounts": [
@@ -29,4 +57,3 @@
   ]
 
 }
-
