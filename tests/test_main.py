@@ -1,6 +1,6 @@
 import pytest
 
-from src.my_package import main as mut
+from my_package import main as mut
 
 
 @pytest.mark.parametrize(
